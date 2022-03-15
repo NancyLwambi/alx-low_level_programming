@@ -1,17 +1,16 @@
-
-int(main void)
-
-#include <stdio.h>
+#include "main.h"
 /**
- * print_alphabet - prints the english alphabet from a-z.
- * Return: Nothing.
+ * print_alphabet - check code for students.
+ *
+ * Return: Always 0.
 */
 void print_alphabet(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
+char alp = 'a';
+while (alp <= 'z')
 {
-_putchar(c);
+_putchar (alp);
+alp++;
 }
-_putchar('\n');
+_putchar ('\n');
 }
