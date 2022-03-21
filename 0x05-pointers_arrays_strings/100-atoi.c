@@ -17,7 +17,7 @@ if (s[i] == '-')
 sig = sig * -1;
 if (s[i] >= '0' && s[i] <= '9')
 {
-res = res *10;
+res = res * 10;
 res -= (s[i] - '0');
 brk = 1;
 }
