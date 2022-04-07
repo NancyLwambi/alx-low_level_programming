@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - Concatenates two strings using at
  *                  most an inputted number of bytes.
@@ -14,7 +13,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
-	unsigned int len = n, i
+	unsigned int len = n, i;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -25,9 +24,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i]; i++)
 		len++;
 
-	concat = malloc(sizeof(char) * (len + 1));
+concat = malloc(sizeof(char) * (len + 1));
 
-	if (concat == NULL)
+		if (concat == NULL)
 		return (NULL);
 
 	len = 0;
