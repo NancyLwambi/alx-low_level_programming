@@ -1,29 +1,25 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * array_range - get len, malloc * len
- * loop size of len to insert min++ into new arr
- * @min: min input
- * @max: max input
- * Return: pointer to new arr of ints
+ * *_calloc - call
+ * @nmemb: n
+ * @size: size
+ * Return: 0
  */
-int *array_range(int min, int max)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *arr;
-	int i, len;
+	char *arr;
+	unsigned int i;
 
-	if (min > max)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	len = max - min + 1;
-
-	arr = malloc(sizeof(int) * len);
-
+	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
-		arr[i] = min++;
+	for (i = 0; i < (nmemb * size); i++)
+		arr[i] = 0;
 
 	return (arr);
 }
